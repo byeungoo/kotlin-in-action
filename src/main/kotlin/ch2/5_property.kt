@@ -3,7 +3,7 @@ package ch2
 class Rectangle(val height : Int, val width : Int) {
 
     /**
-     * 클래스 트것ㅇ을 정의하고 싶다면 프로퍼티로 정의
+     * 클래스 특성을 정의하고 싶다면 프로퍼티로 정의
      */
     val isSquare: Boolean
         get () {    // 커스텀 접근자

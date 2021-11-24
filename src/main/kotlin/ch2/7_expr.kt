@@ -20,13 +20,35 @@ fun eval(e: Expr) : Int {
     throw IllegalArgumentException("Unknown expression")
 }
 
+/**
+ * if문을 when으로 개선. if와 when중 어떤걸 사용할 때 더 좋은지 판단해보기
+ */
 fun refactEval(e: Expr) : Int = when(e) {
     is Num -> e.value
     is Sum -> refactEval(e.right) + refactEval(e.left)
     else -> throw IllegalArgumentException("Unknown expression")
 }
 
+/**
+ * when에서 block 사용
+ */
+fun evalWithLogging(e : Expr) : Int = when(e) {
+    is Num -> {
+        println("num: ${e.value}")
+        e.value     // 블록의 마지막 식이므로 e의 타입이 Num이면 e.value 반환
+    }
+    is Sum -> {
+        val left = evalWithLogging(e.left)
+        val right = evalWithLogging(e.right)
+        println("sum : $left + $right")
+        left + right
+    }
+    else -> throw IllegalArgumentException("Unknown expression")
+
+}
+
 fun main() {
     println(eval(Sum(Sum(Num(1), Num(2)), Num(4))))
     println(refactEval(Sum(Sum(Num(1), Num(2)), Num(4))))
+    println(evalWithLogging(Sum(Sum(Num(1), Num(2)), Num(4))))
 }
