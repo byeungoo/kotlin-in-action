@@ -17,3 +17,15 @@ open class View2 {
     }
 
 }
+
+class MyButton : View2 {
+
+    constructor(ctx: Context) : super(ctx) { // 상위 클래스 생성자 호출
+
+    }
+
+    constructor(ctx: Context, attr: AttributeSet) : super(ctx, attr) { // 상위 클래스 생성자 호출
+
+    }
+
+}

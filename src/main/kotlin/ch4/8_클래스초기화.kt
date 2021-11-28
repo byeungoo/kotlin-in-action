@@ -18,7 +18,7 @@ class User3(val nickname: String)
 
 class User4(val nickname: String, val isSubscribed: Boolean = true)
 
-class User5(val superNickname : String) : User2(superNickname)  // 부모 생성자에 nickname으로 생성자 호출
+class User5(val superNickname : String) : User2(superNickname)  // 상위 클래스 생성자 호출
 
 fun main() {
     val hoon = User4("hoon")    // isSubscribed는 기본값 사용
