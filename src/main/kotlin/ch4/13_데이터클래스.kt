@@ -12,10 +12,16 @@ class Client(val name: String, val postalCode: Int) {
     override fun hashCode(): Int = name.hashCode() * 31 + postalCode    // 동일한 해시코드 값 반환
 }
 
+/**
+ * equals,hashCode, toString 자동 생성
+ */
+data class Client2(val name: String, val postalCode: Int)
+
 fun main() {
     val client1 = Client("hoon", 1541)
     println(client1)
 
     val client2 = Client("hoon", 1541)
     println(client1 == client2)
+
 }
