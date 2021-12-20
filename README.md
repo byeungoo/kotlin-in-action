@@ -1,1 +1,1 @@
-### Kotlin IN ACTION 예저 정리 REPOSITORY
+### Kotlin IN ACTION 예제 정리 REPOSITORY
