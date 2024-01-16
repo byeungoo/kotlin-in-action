@@ -4,7 +4,7 @@ import java.util.*
 
 fun main() {
 
-   val binaryReps = TreeMap<Char, String>()    // 키에 대해 정렬렬
+   val binaryReps = TreeMap<Char, String>()    // 키에 대해 정렬
 
    for (c in 'A'..'F') {
         val binary = Integer.toBinaryString(c.toInt())
