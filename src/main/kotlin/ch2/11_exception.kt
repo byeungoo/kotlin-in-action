@@ -14,7 +14,7 @@ fun readNumber(reader: BufferedReader) : Int? { // 함수가 던질 수 있는 �
     } catch (e : NumberFormatException) {
         return null
     } finally {
-        reader.close()
+        reader.close() // 체크 예외
     }
 
 }
