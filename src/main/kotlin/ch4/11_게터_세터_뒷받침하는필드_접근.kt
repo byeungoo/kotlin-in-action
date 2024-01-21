@@ -9,6 +9,9 @@ class User7(val name: String) {
 
             field = value   // 뒷받침하는 필드 값 변경
         }
+        get(): String {
+            return field
+        }
 }
 
 fun main() {
