@@ -14,4 +14,15 @@ fun countClicks(window: Window) {
             clickCount++    // 로컬 변수의 값 변경
         }
     })
+
+    val listener = object : MouseAdapter() {
+        override fun mouseClicked(e: MouseEvent?) {
+            super.mouseClicked(e)
+        }
+
+        override fun mousePressed(e: MouseEvent?) {
+            super.mousePressed(e)
+        }
+    }
+
 }
