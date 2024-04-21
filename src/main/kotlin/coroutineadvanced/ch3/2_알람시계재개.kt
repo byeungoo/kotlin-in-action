@@ -1,5 +1,7 @@
 package coroutineadvanced.ch3
 
+import coroutine.log
+import kotlinx.coroutines.delay
 import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
 import kotlin.coroutines.resume
@@ -16,10 +18,11 @@ private val executor = Executors.newSingleThreadExecutor{
 suspend fun main() {
 
 
-    println("Before")
+    log("Before")
 
 //    delay(1000)
+    delay(1000)
 
-    println("After")
+    log("After")
 
 }

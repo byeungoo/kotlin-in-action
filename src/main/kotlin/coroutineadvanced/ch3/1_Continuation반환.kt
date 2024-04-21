@@ -1,5 +1,6 @@
 package coroutineadvanced.ch3
 
+import coroutine.log
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
 import kotlin.concurrent.thread
@@ -9,7 +10,7 @@ import kotlin.coroutines.suspendCoroutine
 
 suspend fun main() {
 
-    println("Before")
+    log("Before")
 
 //    // 1. Before만 출력
 //    suspendCoroutine<Unit> { }
@@ -51,7 +52,7 @@ suspend fun main() {
         continuation -> continueAfterSecond(continuation)
     }
 
-    println("After")
+    log("After")
 }
 
 // 6. 정해진 시간 뒤에 코루틴을 다시 재개하는 함수
